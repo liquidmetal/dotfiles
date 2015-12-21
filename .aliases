@@ -1,0 +1,65 @@
+alias so='source ~/.bash_aliases'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ll='ls -alh'
+alias exe='chmod 775'
+
+# Functions
+setup_homework() {
+    mkdir submission
+    touch submission/Makefile
+    echo "all:" >> submission/Makefile
+    echo -e "\ttar -cf usinha-hw$1.tar *.pdf *.m" >> submission/Makefile
+
+    cp ~/customization/usinha-hw1.tex submission/usinha-hw$1.tex
+}
+
+generate_pdf() {
+    pdflatex $1.tex
+    evince $1.pdf
+}
+
+alias devlog='cd /work/personal/devlog/'
+alias work='cd /work/'
+
+alias genpdf=generate_pdf
+
+# CMU specific aliases
+alias cmussh='ssh linux.andrew.cmu.edu'
+alias matlabrun='matlab -nodesktop -nosplash -r "run\( """$1""" \)"'
+alias homework=setup_homework
+
+
+# aishack specific
+alias sshaishack='ssh utkarsh@aishack.in'
+
+
+# cmu opensource
+setup_cmu_projects() {
+    export GOPATH="/work/side-projects/opensource/cmu"
+    export PATH=$GOPATH/bin:$PATH
+    cd $GOPATH/bin
+}
+alias cmu=setup_cmu_projects
+
+alias ri_print='xeroxprint -dNSH-RI-printer '
+alias cv='cd /work/school/16-720/'
+alias ml='cd /work/school/10-601/'
+alias math='cd /work/school/16-811/'
+
+## Cuda setup
+export PATH="/usr/local/cuda-7.5/bin:$PATH"
+export LD_LIBRARY_PATH="/usr/local/cuda-7.5/lib64:$LD_LIBRARY_PATH"
+export CUDA_ROOT=/usr/local/cuda-7.5
+export THEANO_FLAGS='cuda.root=$CUDA_ROOT,device=gpu,floatX=float32'
+
+alias vv='gwenview '
+
+## Algorithm aliases
+alias sol="touch solution.py; exe solution.py; echo '#!/usr/bin/python' >> solution.py"
+
+alias mountrpi='sshfs pi@braavos:/work/ /work/personal/raspberry'
+alias unmountrpi='fusermount -u /work/personal/raspberry'
+alias book='cd /work/personal/aishack-content/paper-book/'
