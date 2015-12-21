@@ -1,2 +1,4 @@
 alias vv='ristretto'
 alias codebase='cd ~/research/software'
+alias seg='cd ~/seg/logomatch/preprocessing'
+alias seg_run='python2 segment_and_train4.py None out '
