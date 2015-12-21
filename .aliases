@@ -63,3 +63,4 @@ alias sol="touch solution.py; exe solution.py; echo '#!/usr/bin/python' >> solut
 alias mountrpi='sshfs pi@braavos:/work/ /work/personal/raspberry'
 alias unmountrpi='fusermount -u /work/personal/raspberry'
 alias book='cd /work/personal/aishack-content/paper-book/'
+alias dotfiles='cd /work/personal/dotfiles'
