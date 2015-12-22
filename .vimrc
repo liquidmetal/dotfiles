@@ -33,3 +33,5 @@ augroup resCur
 augroup END
 
 hi MatchParen cterm=none ctermbg=yellow ctermfg=black
+filetype on
+syntax on
