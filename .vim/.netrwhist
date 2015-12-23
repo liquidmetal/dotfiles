@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/work/software/opencv/opencv-3.0.0/modules/imgproc/include/opencv2/imgproc'
 let g:netrw_dirhist_2='/work/personal/aishack-content/paper-book/01-introduction'
 let g:netrw_dirhist_3='/work/school/16-720/project/.git'
@@ -8,3 +8,4 @@ let g:netrw_dirhist_5='/work/school/10-601/project/code/svm/svm_batch'
 let g:netrw_dirhist_6='/home/utkarsh/research/software/dotfiles/.vim/ftdetect'
 let g:netrw_dirhist_7='/home/utkarsh/research/software/benchmark/json'
 let g:netrw_dirhist_8='/home/utkarsh/.vim'
+let g:netrw_dirhist_9='/home/utkarsh/research/software/benchmark/tessdata'
