@@ -48,12 +48,16 @@ alias ri_print='xeroxprint -dNSH-RI-printer '
 alias cv='cd /work/school/16-720/'
 alias ml='cd /work/school/10-601/'
 alias math='cd /work/school/16-811/'
+alias cvta='cd /work/school/16-385'
 
 ## Cuda setup
 export PATH="/usr/local/cuda-7.5/bin:$PATH"
 export LD_LIBRARY_PATH="/usr/local/cuda-7.5/lib64:$LD_LIBRARY_PATH"
 export CUDA_ROOT=/usr/local/cuda-7.5
 export THEANO_FLAGS='cuda.root=$CUDA_ROOT,device=gpu,floatX=float32'
+
+## ROS setup
+source /opt/ros/indigo/setup.bash
 
 alias vv='gwenview '
 
@@ -64,3 +68,15 @@ alias mountrpi='sshfs pi@braavos:/work/ /work/personal/raspberry'
 alias unmountrpi='fusermount -u /work/personal/raspberry'
 alias book='cd /work/personal/aishack-content/paper-book/'
 alias dotfiles='cd /work/personal/dotfiles'
+
+alias server='python -m SimpleHTTPServer'
+
+
+setup_hw1() {
+    mv matlab/houghScript.m matlab/ProvidedHoughScript.m
+    mv matlab/drawLine.m matlab/ProvidedDrawLine.m
+    cp /work/school/16-385/homeworks/hw1/matlab/{houghScript.m,drawLine.m} ./matlab/
+    cp /work/school/16-385/homeworks/hw1/data/ ./ -rvL
+    mkdir results
+}
+alias ta_hw1=setup_hw1
