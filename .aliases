@@ -30,6 +30,7 @@ alias genpdf=generate_pdf
 alias cmussh='ssh linux.andrew.cmu.edu'
 alias matlabrun='matlab -nodesktop -nosplash -r "run\( """$1""" \)"'
 alias homework=setup_homework
+alias munch='cd /work/side-projects/broccoli-munch'
 
 
 # aishack specific
@@ -49,6 +50,8 @@ alias cv='cd /work/school/16-720/'
 alias ml='cd /work/school/10-601/'
 alias math='cd /work/school/16-811/'
 alias cvta='cd /work/school/16-385'
+alias vlr='cd /work/school/16-824/'
+alias phy='cd /work/school/16-823/'
 
 ## Cuda setup
 export PATH="/usr/local/cuda-7.5/bin:$PATH"
@@ -69,7 +72,13 @@ alias unmountrpi='fusermount -u /work/personal/raspberry'
 alias book='cd /work/personal/aishack-content/paper-book/'
 alias dotfiles='cd /work/personal/dotfiles'
 
+export PATH=/work/school/15-618/ispc-v1.8.2-linux/:$PATH
+
 alias server='python -m SimpleHTTPServer'
+
+alias cmughc='ssh ghc47.ghc.andrew.cmu.edu'
+alias sshnea='ssh usinha@128.237.175.232'
+
 
 
 setup_hw1() {
@@ -80,3 +89,5 @@ setup_hw1() {
     mkdir results
 }
 alias ta_hw1=setup_hw1
+alias nea='cd /work/school/capstone/mscv-nea'
+alias late='ssh usinha@latedays.andrew.cmu.edu'
