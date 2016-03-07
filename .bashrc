@@ -113,5 +113,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
 . /work/software/torch/install/bin/torch-activate
+source ~/.colors.solarized
