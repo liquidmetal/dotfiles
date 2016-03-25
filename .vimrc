@@ -31,3 +31,4 @@ filetype on
 syntax on
 set cursorline
 hi CursorLine   cterm=bold ctermbg=black ctermfg=white
+set pastetoggle=<F2>

@@ -91,3 +91,6 @@ setup_hw1() {
 alias ta_hw1=setup_hw1
 alias nea='cd /work/school/capstone/mscv-nea'
 alias late='ssh usinha@latedays.andrew.cmu.edu'
+
+export PATH=/work/personal/caffe/build/tools/:$PATH
+export PYTHONPATH=/work/personal/caffe/python/:$PYTHONPATH
