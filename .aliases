@@ -88,7 +88,18 @@ setup_hw1() {
     cp /work/school/16-385/homeworks/hw1/data/ ./ -rvL
     mkdir results
 }
+setup_hw2() {
+    cp /work/school/16-385/homeworks/hw2/tozip/data . -rL
+}
+fix_backup() {
+    mv dictionaryHarris.mat.bak dictionaryHarris.mat
+    mv dictionaryRandom.mat.bak dictionaryRandom.mat
+    mv visionHarris.mat.bak visionHarris.mat
+    mv visionRandom.mat.bak visionRandom.mat
+}
 alias ta_hw1=setup_hw1
+alias ta_hw2=setup_hw2
+alias ta_fix=fix_backup
 alias nea='cd /work/school/capstone/mscv-nea'
 alias late='ssh usinha@latedays.andrew.cmu.edu'
 
