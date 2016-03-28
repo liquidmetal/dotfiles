@@ -30,7 +30,11 @@ alias genpdf=generate_pdf
 alias cmussh='ssh linux.andrew.cmu.edu'
 alias matlabrun='matlab -nodesktop -nosplash -r "run\( """$1""" \)"'
 alias homework=setup_homework
-alias munch='cd /work/side-projects/broccoli-munch'
+load_munch() {
+    cd /work/side-projects/broccoli-munch/
+    source setup-dev-env.sh
+}
+alias munch=load_munch
 
 
 # aishack specific
