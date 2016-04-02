@@ -56,6 +56,7 @@ alias math='cd /work/school/16-811/'
 alias cvta='cd /work/school/16-385'
 alias vlr='cd /work/school/16-824/'
 alias phy='cd /work/school/16-823/'
+alias pgm='cd /work/school/10-708/'
 
 ## Cuda setup
 export PATH="/usr/local/cuda-7.5/bin:$PATH"
@@ -95,6 +96,11 @@ setup_hw1() {
 setup_hw2() {
     cp /work/school/16-385/homeworks/hw2/tozip/data . -rL
 }
+setup_hw3() {
+    cp /work/school/16-385/homeworks/hw3/matlab/brief-indices.mat .
+    mv computeBrief.m computeBrief.m.bak
+    cp /work/school/16-385/homeworks/hw3/matlab/computeBrief.m .
+}
 fix_backup() {
     mv dictionaryHarris.mat.bak dictionaryHarris.mat
     mv dictionaryRandom.mat.bak dictionaryRandom.mat
@@ -103,6 +109,7 @@ fix_backup() {
 }
 alias ta_hw1=setup_hw1
 alias ta_hw2=setup_hw2
+alias ta_hw3=setup_hw3
 alias ta_fix=fix_backup
 load_nea() {
     cd /work/school/capstone/mscv-nea/users/utk
@@ -112,4 +119,5 @@ alias nea=load_nea
 alias late='ssh usinha@latedays.andrew.cmu.edu'
 
 export PATH=/work/personal/caffe-personal/cmake-build/tools/:$PATH
+export LD_LIBRARY_PATH=/work/school/16-824/project/cuda/lib64:$LD_LIBRARY_PATH
 export PYTHONPATH=/work/personal/caffe-personal/python/:$PYTHONPATH
