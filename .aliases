@@ -104,8 +104,12 @@ fix_backup() {
 alias ta_hw1=setup_hw1
 alias ta_hw2=setup_hw2
 alias ta_fix=fix_backup
-alias nea='cd /work/school/capstone/mscv-nea'
+load_nea() {
+    cd /work/school/capstone/mscv-nea/users/utk
+    source setup.sh
+}
+alias nea=load_nea
 alias late='ssh usinha@latedays.andrew.cmu.edu'
 
-export PATH=/work/personal/caffe/build/tools/:$PATH
-export PYTHONPATH=/work/personal/caffe/python/:$PYTHONPATH
+export PATH=/work/personal/caffe-personal/cmake-build/tools/:$PATH
+export PYTHONPATH=/work/personal/caffe-personal/python/:$PYTHONPATH
