@@ -97,9 +97,21 @@ setup_hw2() {
     cp /work/school/16-385/homeworks/hw2/tozip/data . -rL
 }
 setup_hw3() {
-    cp /work/school/16-385/homeworks/hw3/matlab/brief-indices.mat .
-    mv computeBrief.m computeBrief.m.bak
-    cp /work/school/16-385/homeworks/hw3/matlab/computeBrief.m .
+    cp /work/school/16-385/homeworks/hw3/matlab/brief-indices.mat ./matlab/
+    mv ./matlab/computeBrief.m ./matlab/computeBrief.m.bak
+    cp /work/school/16-385/homeworks/hw3/matlab/computeBrief.m ./matlab/
+    mkdir ./data/
+    cp /work/school/16-385/homeworks/hw3/data/ar_source2.mp4 ./data/
+    cp /work/school/16-385/homeworks/hw3/data/ar_source.mov ./data/
+    cp /work/school/16-385/homeworks/hw3/data/book.mov ./data/
+    cp /work/school/16-385/homeworks/hw3/data/cv_cover.jpg ./data/
+    cp /work/school/16-385/homeworks/hw3/data/cv_desk.png ./data/
+    cp /work/school/16-385/homeworks/hw3/data/hp_cover.jpg ./data/
+    cp /work/school/16-385/homeworks/hw3/data/hp_desk.png ./data/
+    cp /work/school/16-385/homeworks/hw3/data/pano_left.jpg ./data/
+    cp /work/school/16-385/homeworks/hw3/data/pano_right.jpg ./data/
+    cp /work/school/16-385/homeworks/hw3/matlab/warpH.m ./matlab/
+    cp /work/school/16-385/homeworks/hw3/ec/loadVid.m ./ec/
 }
 fix_backup() {
     mv dictionaryHarris.mat.bak dictionaryHarris.mat
