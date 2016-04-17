@@ -113,6 +113,9 @@ setup_hw3() {
     cp /work/school/16-385/homeworks/hw3/matlab/warpH.m ./matlab/
     cp /work/school/16-385/homeworks/hw3/ec/loadVid.m ./ec/
 }
+setup_hw4() {
+    cp /work/school/16-385/homeworks/hw4/handout/data . -rL
+}
 fix_backup() {
     mv dictionaryHarris.mat.bak dictionaryHarris.mat
     mv dictionaryRandom.mat.bak dictionaryRandom.mat
@@ -122,6 +125,7 @@ fix_backup() {
 alias ta_hw1=setup_hw1
 alias ta_hw2=setup_hw2
 alias ta_hw3=setup_hw3
+alias ta_hw4=setup_hw4
 alias ta_fix=fix_backup
 load_nea() {
     cd /work/school/capstone/mscv-nea/users/utk
