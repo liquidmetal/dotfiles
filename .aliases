@@ -73,6 +73,7 @@ alias vv='gwenview '
 alias sol="touch solution.py; exe solution.py; echo '#!/usr/bin/python' >> solution.py"
 
 alias mountrpi='sshfs pi@braavos:/work/ /work/personal/raspberry'
+alias mountnas='sshfs pi@braavos:/media/usbhdd1/ /nas/'
 alias unmountrpi='fusermount -u /work/personal/raspberry'
 alias book='cd /work/personal/aishack-content/paper-book/'
 alias dotfiles='cd /work/personal/dotfiles'
@@ -116,6 +117,13 @@ setup_hw3() {
 setup_hw4() {
     cp /work/school/16-385/homeworks/hw4/handout/data . -rL
 }
+setup_hw5() {
+    mkdir ./data/
+    cp /work/school/16-385/homeworks/hw5/data/car ./data/ -rL
+    cp /work/school/16-385/homeworks/hw5/data/desk ./data/ -rL
+    cp /work/school/16-385/homeworks/hw5/data/landing ./data/ -rL
+    cp /work/school/16-385/homeworks/hw5/data/car-color.jpg ./data/ -L
+}
 fix_backup() {
     mv dictionaryHarris.mat.bak dictionaryHarris.mat
     mv dictionaryRandom.mat.bak dictionaryRandom.mat
@@ -126,6 +134,7 @@ alias ta_hw1=setup_hw1
 alias ta_hw2=setup_hw2
 alias ta_hw3=setup_hw3
 alias ta_hw4=setup_hw4
+alias ta_hw5=setup_hw5
 alias ta_fix=fix_backup
 load_nea() {
     cd /work/school/capstone/mscv-nea/users/utk
