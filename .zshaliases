@@ -1,3 +1,5 @@
 alias ll='ls -alh'
+alias exe='chmod 775 '
+export PATH=/mnt/c/work/personal/utils/:$PATH
 
 alias so='source ~/.zshaliases'
