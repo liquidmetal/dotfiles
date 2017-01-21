@@ -30,5 +30,9 @@ hi MatchParen cterm=none ctermbg=yellow ctermfg=black
 filetype on
 syntax on
 set cursorline
-hi CursorLine   cterm=bold ctermbg=black ctermfg=white
+hi CursorLine   cterm=bold ctermbg=darkred ctermfg=white
 set pastetoggle=<F2>
+
+syntax enable
+set background=dark
+" colorscheme solarized
